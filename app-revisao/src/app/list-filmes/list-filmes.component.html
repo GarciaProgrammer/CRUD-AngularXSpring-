@@ -1,0 +1,17 @@
+<div class="d-flex justify-between-content">
+  <ul class="list-group">
+    <li *ngFor="let filme of filmes | async"
+     class="list-group-item">
+     <span class="badge badge-dark">
+       {{filme.id}}
+     </span>
+    <span> {{filme.titulo}} </span>
+
+    <span>
+      {{filme.categoria}}
+    </span>
+
+    <button (click)="delete(filme.id)" class="btn btn-danger"> &times; </button>
+    </li>
+  </ul>
+</div>

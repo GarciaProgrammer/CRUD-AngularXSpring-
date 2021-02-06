@@ -1,0 +1,24 @@
+<nav class="navbar navbar-expand-md navbar-dark bg-primary">
+  <span class="navbar-brand">App Filmes (Revisão)</span>
+  <button class="navbar-toggler" type="button" aria-controls="navbarContent" [attr.aria-expanded]="!collapsed" aria-label="Toggle navigation" (click)="collapsed = !collapsed">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="navbar-collapse" [class.collapse]="collapsed" id="navbarContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a routerLink="/home" class="nav-link">Home</a>
+      </li>
+      <li class="nav-item" ngbDropdown>
+        <a class="nav-link" tabindex="0" ngbDropdownToggle id="navbarDropdown1" role="button">
+          Filmes
+        </a>
+        <div ngbDropdownMenu aria-labelledby="navbarDropdown1" class="dropdown-menu">
+          <a ngbDropdownItem routerLink="/filmes" >Lista de Filmes</a>
+          <a ngbDropdownItem routerLink="/filmes/add" >Adicionar Filme</a>
+        </div>
+      </li>
+
+    </ul>
+  </div>
+</nav>
